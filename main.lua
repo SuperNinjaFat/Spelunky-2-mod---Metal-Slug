@@ -74,6 +74,7 @@ local function shoot_bullet(self)
 
 	local x_shot_offset <const> = 1.25
 
+	-- # TODO: Lower intensity of FX entity illumination
 	local shotgun_blast = get_entity(spawn_entity(ENT_TYPE.FX_SHOTGUNBLAST, x + dir * x_shot_offset, y - 0.1, l, 0, 0))--[[@as FxShotgunBlast]]
 	-- shotgun_blast.flags = (shotgun_blast.flags & ~ENT_FLAG.FACING_LEFT) | (self.flags & ENT_FLAG.FACING_LEFT)
 	shotgun_blast.flags = dir == -1 and set_flag(shotgun_blast.flags, ENT_FLAG.FACING_LEFT)
@@ -84,6 +85,7 @@ local function shoot_bullet(self)
 
 	local smoke_emitter = generate_world_particles(PARTICLEEMITTER.SHOTGUNBLAST_SMOKE, self.uid)
 	smoke_emitter.offset_x = dir * 1
+	-- # TODO: Touch up/adjust spark effect, it looks too noisy
 	local sparks_emitter = generate_world_particles(PARTICLEEMITTER.SHOTGUNBLAST_SPARKS, self.uid)
 	sparks_emitter.offset_x = dir * 1
 end
