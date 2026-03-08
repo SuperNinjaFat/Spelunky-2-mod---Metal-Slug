@@ -22,9 +22,9 @@ jobs:
 
             - name: Zip up files
               run: |
-                zip -r MetalSlugHeavyMacinegun-${{ github.ref_name }}.zip * .[^.]*
+                zip -r MetalSlugHeavyMachinegun-${{ github.ref_name }}.zip * .[^.]*
             
             - name: Create Release with uploaded asset
               uses: softprops/action-gh-release@v2
               with:
-                files: MetalSlugHeavyMacinegun-${{ github.ref_name }}.zip
+                files: MetalSlugHeavyMachinegun-${{ github.ref_name }}.zip
