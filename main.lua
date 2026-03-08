@@ -1,10 +1,10 @@
 local celib = require("custom_entities")
 
 meta = {
-	name = "Metal Slug Weapons",
+	name = "Metal Slug - Heavy Machinegun",
 	version = "1.0",
 	author = "Super Ninja Fat, The Greeni Porcini",
-	description = "Metal Slug weapons! In Spelunky 2!",
+	description = "Adds the heavy machine gun from the Metal Slug series into shops and crates!",
 }
 
 local machine_gun_texture_id
